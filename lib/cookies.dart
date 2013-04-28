@@ -1,11 +1,19 @@
+/**
+ * document.cookie library (client side)
+ *
+ * ported from
+ * http://www.quirksmode.org/js/cookies.html
+ *
+ */
+
 library cookies;
 
 import 'dart:html';
 
-/*
+/**
  *  Create client side cookie
  */
-void createCookie(String name, String value, var days) {
+void createCookie(String name, String value, int days) {
   String expires;
   if (days != null)  {
     DateTime now = new DateTime.now();
@@ -17,9 +25,9 @@ void createCookie(String name, String value, var days) {
   document.cookie = name + '=' + value + expires + '; path=/';
 }
 
-/*
- * Read cookie values
- * Returns null when the cookie does not exist
+/**
+ * Read cookie values,
+ * returns null when the cookie does not exist
  */
 String readCookie(String name) {
   String nameEQ = name + '=';
@@ -34,7 +42,7 @@ String readCookie(String name) {
   return null;
 }
 
-/*
+/**
  * Remove cookie
  */
 void eraseCookie(String name) {
