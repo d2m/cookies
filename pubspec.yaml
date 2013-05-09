@@ -3,6 +3,6 @@ version: 0.0.1-dev
 author: Michael Haubenwallner <michael.haubenwallner@gmail.com>
 description: A client cookie library
 homepage: https://plus.google.com/108931164613660994654
-dependencies:
+dev_dependencies:
   unittest: any
   browser: any
